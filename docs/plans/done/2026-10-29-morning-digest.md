@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-10-29
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Digest types: DigestRow and readNight signature | — | claude-code · claude-opus-5-5 · medium | 2026-10-29 |
+| 2 | Run log reader | #1 | claude-code · claude-opus · default | 2026-10-29 |
+| 3 | Digest page: GET /digest/:night | #1 | claude-code · claude-sonnet · default | 2026-10-29 |
+| 4 | Digest JSON: GET /api/digest/:night | #1 | claude-code · claude-sonnet · default | 2026-10-29 |
+| 5 | Status board links each night to its digest | #1 | claude-code · claude-sonnet · default | 2026-10-29 |
+| 6 | Route tests for the digest page and JSON | #1 | claude-code · claude-sonnet · default | 2026-10-29 |
+| 7 | Preview for review | #2–#6 | claude-code · claude-opus-5-5 · default | 2026-10-29 |
+| 8 | Clean up the preview | #7 | claude-code · claude-opus-5-5 · default | 2026-10-29 |
+
+The preview at https://olafsulich.github.io/rig-preview/ lost its lane marker once the review was in: saved again with `LANE_MARKER` unset and uploaded over the same link. The preview repo's history was replaced, so the marked copy is gone from git too. See ADR 0003.
